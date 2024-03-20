@@ -31,11 +31,19 @@ class QuadraticEquationTest {
     }
     @Test
     void deux_soulution(){
-        int a=0;
-        int b=2;
+        int a=2;
+        int b=5;
         int c=3;
-        assertThrows(IllegalArgumentException.class, () -> QuadraticEquation.solve(a,b,c));
+        int d[]={-(3/2),-1};
+        assertEquals(d, QuadraticEquation.solve(a,b,c));
 
+    }
+    @Test
+    void delta_negative(){
+        int a=1;
+        int b=1;
+        int c=3;
+        assertEquals(null,QuadraticEquation.solve(a,b,c));
     }
 
 

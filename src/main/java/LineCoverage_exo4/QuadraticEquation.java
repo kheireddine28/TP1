@@ -10,7 +10,8 @@ public class QuadraticEquation {
             return null;
         }
         if (delta == 0) {
-            return new double[]{-b / (2 * a)};
+            return new double[]{
+                    -b / (2 * a)};
         }
         return new double[]{
                 (-b + Math.sqrt(delta)) / (2 * a),
